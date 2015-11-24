@@ -13,17 +13,17 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
+import data.Data;
+
 public class Excel {
 
-	@SuppressWarnings("rawtypes")
-	ArrayList<ArrayList> data;
+	
 
-	@SuppressWarnings("rawtypes")
 	public Excel() {
-		data = new ArrayList<ArrayList>();
+		
 	}
 
-	public void loadData(String path) throws EncryptedDocumentException, InvalidFormatException, IOException {
+	public void loadData(String path, Data data) throws EncryptedDocumentException, InvalidFormatException, IOException {
 
 		FileInputStream file = new FileInputStream(new File(path));
 		org.apache.poi.ss.usermodel.Workbook workbook = WorkbookFactory.create(file);
@@ -38,11 +38,11 @@ public class Excel {
 					Cell cell = cellIterator.next();
 					testDataType(cell, arrayRow);
 				}
-				data.add(arrayRow);
+				data.data.add(arrayRow);
 			}
 
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		}
 		workbook.close();
 		file.close();
