@@ -16,7 +16,10 @@ Sure! There is still a lot to do and anybody willing to contribute is welcome
 - **Temporary (Until i build the project correctly):**
 
 -Download (or clone) the repository.
+
 -Create a new Java Project on eclipse.
+
 -Copy the downloaded src folder to your eclipse project home directory.
+
 -Compile using eclipse (If you got here, you know how this is done)
 
