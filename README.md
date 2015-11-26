@@ -1,7 +1,8 @@
 # JavaDataMining
 
 ### What is it? ###
-**A Java data mining API.** A simple compilation of libraries in java with some extra Data Processing code I made trying to make a simple API for these libraries:
+**A Java data mining API.** 
+A simple compilation of libraries in java with some extra Data Processing code I made trying to make a simple API for these libraries:
 
 [Apache POI](https://poi.apache.org/) Currently version 3.13
 
