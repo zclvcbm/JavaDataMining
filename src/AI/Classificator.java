@@ -16,6 +16,8 @@ import net.sf.javaml.core.Instance;
 import net.sf.javaml.tools.data.FileHandler;
 
 public class Classificator {
+	
+	public Classificator(){}
 
 	public Classifier randomForest(String path, int numberOfTrees, int key)
 			throws IOException, IllegalArgumentException {
