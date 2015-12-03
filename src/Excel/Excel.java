@@ -17,13 +17,13 @@ import data.Data;
 
 public class Excel {
 
-	
+	String path;
 
-	public Excel() {
-		
+	public Excel(String path) {
+		this.path=path;
 	}
 
-	public void loadData(String path, Data data) throws EncryptedDocumentException, InvalidFormatException, IOException {
+	public void loadData(Data data) throws EncryptedDocumentException, InvalidFormatException, IOException {
 
 		FileInputStream file = new FileInputStream(new File(path));
 		org.apache.poi.ss.usermodel.Workbook workbook = WorkbookFactory.create(file);

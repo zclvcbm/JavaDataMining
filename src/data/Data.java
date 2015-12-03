@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 public class Data {
 	@SuppressWarnings("rawtypes")
-	public ArrayList<ArrayList> data = new ArrayList<ArrayList>();
+	public ArrayList<ArrayList> data;
 
 	public Data() {
+		data = new ArrayList<ArrayList>();
 	}
 
 	@SuppressWarnings("rawtypes")

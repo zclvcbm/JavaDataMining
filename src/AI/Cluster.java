@@ -9,6 +9,7 @@ import net.sf.javaml.core.Dataset;
 import net.sf.javaml.tools.data.FileHandler;
 
 public class Cluster {
+	
 	public Cluster(){}
 	
 	public Dataset[] kMeans(String path, int numberOfClusters, int numberOfIterations, int key) throws IOException{

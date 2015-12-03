@@ -7,11 +7,12 @@ import java.io.IOException;
 import data.Data;
 
 public class Txt {
-
-	public Txt() {
+	String path;
+	public Txt(String path) {
+		this.path=path;
 	}
 
-	public void writeToTxt(String path, Data data, boolean onlyNumbers) throws IOException {
+	public void writeToTxt(Data data, boolean onlyNumbers) throws IOException {
 
 		if (path.equals(null)) {
 			path = "defaultData.data";

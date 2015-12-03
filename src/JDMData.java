@@ -9,36 +9,24 @@ import Txt.Txt;
 import data.Data;
 
 public class JDMData {
-	Excel excel;
-	Txt txt;
-	Data data;
+	
 
 
 	public JDMData() {
-		data = new Data();
-		excel = new Excel();
-		txt = new Txt();
-
 	}
 
-	public void loadData(String path) throws EncryptedDocumentException,
+	public void loadData(String path, Data data) throws EncryptedDocumentException,
 			InvalidFormatException, IOException {
-		excel.loadData(path, data);
+		Excel excel= new Excel(path);
+		excel.loadData(data);
 	}
 
-	public void writeToTxt(String path, boolean onlyNumbers) throws IOException {
-		txt.writeToTxt(path, this.data, onlyNumbers);
+	public void writeToTxt(String path, Data data, boolean onlyNumbers) throws IOException {
+		Txt txt= new Txt(path);
+		txt.writeToTxt(data, onlyNumbers);
 	}
 
-	@SuppressWarnings("rawtypes")
-	public ArrayList<ArrayList> getData() {
-		return data.getData();
-	}
 
-	@SuppressWarnings("rawtypes")
-	public void setData(ArrayList<ArrayList> data) {
-		this.data.setData(data);
-	}
 
 
 }
