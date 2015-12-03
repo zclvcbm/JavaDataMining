@@ -6,6 +6,7 @@ public class Data {
 	@SuppressWarnings("rawtypes")
 	public ArrayList<ArrayList> data;
 
+	@SuppressWarnings("rawtypes")
 	public Data() {
 		data = new ArrayList<ArrayList>();
 	}
