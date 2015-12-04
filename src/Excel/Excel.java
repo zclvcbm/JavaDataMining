@@ -71,4 +71,9 @@ public class Excel {
 
 	}
 
+	public void writeData(Data data, boolean onlyNumbers) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

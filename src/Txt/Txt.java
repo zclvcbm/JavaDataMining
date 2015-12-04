@@ -68,4 +68,9 @@ public class Txt {
 		}
 		out.write(stringBuilder.toString() + "\n");
 	}
+
+	public void loadData(Data data) {
+		// TODO Auto-generated method stub
+		
+	}
 }
