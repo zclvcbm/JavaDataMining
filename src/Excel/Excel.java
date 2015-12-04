@@ -38,7 +38,7 @@ public class Excel {
 					Cell cell = cellIterator.next();
 					testDataType(cell, arrayRow);
 				}
-				data.data.add(arrayRow);
+				data.getData().add(arrayRow);
 			}
 
 		} catch (Exception e) {

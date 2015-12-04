@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Data {
 	@SuppressWarnings("rawtypes")
-	public ArrayList<ArrayList> data;
+	private ArrayList<ArrayList> data;
 
 	@SuppressWarnings("rawtypes")
 	public Data() {
