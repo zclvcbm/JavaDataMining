@@ -17,13 +17,13 @@ import data.Data;
 
 public class Excel {
 
-	
+	String path;
 
-	public Excel() {
-		
+	public Excel(String path) {
+		this.path=path;
 	}
 
-	public void loadData(String path, Data data) throws EncryptedDocumentException, InvalidFormatException, IOException {
+	public void loadData(Data data) throws EncryptedDocumentException, InvalidFormatException, IOException {
 
 		FileInputStream file = new FileInputStream(new File(path));
 		org.apache.poi.ss.usermodel.Workbook workbook = WorkbookFactory.create(file);
@@ -38,7 +38,7 @@ public class Excel {
 					Cell cell = cellIterator.next();
 					testDataType(cell, arrayRow);
 				}
-				data.data.add(arrayRow);
+				data.getData().add(arrayRow);
 			}
 
 		} catch (Exception e) {
@@ -69,6 +69,11 @@ public class Excel {
 		break;
 		}
 
+	}
+
+	public void writeData(Data data, boolean onlyNumbers) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

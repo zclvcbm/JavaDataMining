@@ -7,11 +7,12 @@ import java.io.IOException;
 import data.Data;
 
 public class Txt {
-
-	public Txt() {
+	String path;
+	public Txt(String path) {
+		this.path=path;
 	}
 
-	public void writeToTxt(String path, Data data, boolean onlyNumbers) throws IOException {
+	public void writeToTxt(Data data, boolean onlyNumbers) throws IOException {
 
 		if (path.equals(null)) {
 			path = "defaultData.data";
@@ -19,7 +20,7 @@ public class Txt {
 			path = path.replace(".xls", ".data");
 		}
 		BufferedWriter out = new BufferedWriter(new FileWriter(path));
-		int totalRowNumber = data.data.size();
+		int totalRowNumber = data.getData().size();
 		for (int row = 0; row < totalRowNumber; row++) {
 			try {
 				if (onlyNumbers) {
@@ -38,12 +39,12 @@ public class Txt {
 
 		StringBuilder stringBuilder = new StringBuilder();
 
-		Integer rowSize = Integer.valueOf(data.data.get(row).size());
+		Integer rowSize = Integer.valueOf(data.getData().get(row).size());
 		for (int col = 0; col < rowSize - 1; col++) {
 			try {
-				Double.parseDouble(data.data.get(row).get(col).toString());
+				Double.parseDouble(data.getData().get(row).get(col).toString());
 
-				stringBuilder.append(data.data.get(row).get(col).toString());
+				stringBuilder.append(data.getData().get(row).get(col).toString());
 				stringBuilder.append(",");
 
 			} catch (NumberFormatException e1) {
@@ -58,13 +59,18 @@ public class Txt {
 		StringBuilder stringBuilder = new StringBuilder();
 		
 
-		Integer rowSize = Integer.valueOf(data.data.get(row).size());
+		Integer rowSize = Integer.valueOf(data.getData().get(row).size());
 		for (int col = 0; col < rowSize - 1; col++) {
 
-			stringBuilder.append(data.data.get(row).get(col).toString());
+			stringBuilder.append(data.getData().get(row).get(col).toString());
 			stringBuilder.append(",");
 			
 		}
 		out.write(stringBuilder.toString() + "\n");
+	}
+
+	public void loadData(Data data) {
+		// TODO Auto-generated method stub
+		
 	}
 }
