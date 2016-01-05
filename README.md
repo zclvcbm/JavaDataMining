@@ -1,5 +1,7 @@
 # JavaDataMining
 
+Unfortunately, this project is not in development any more. I am trying to develop other "bigger" projects that take almost all my time. I will release bug fix patches if someone finds any bug, but there will be no more improvements, unless the need for JDM changes, a lot. 
+
 ### What is it? ###
 **A Java data mining API.** 
 A simple compilation of libraries in java with some extra Data Processing code I made trying to make a simple API for these libraries:

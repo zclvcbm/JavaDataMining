@@ -29,15 +29,13 @@ This project uses Semantic Versioning. Version format is X.Y.Z:
 Sure! There is still a lot to do and anybody willing to contribute is welcome
 
 
-### How do I compile the code on my machine? ###
 
-- **Temporary (Until i build the project correctly):**
+### How do I compile the project? ###
 
--Download (or clone) the repository.
-
--Create a new Java Project on eclipse.
-
--Copy the downloaded src folder to your eclipse project home directory.
-
--Compile using eclipse (If you got here, you know how this is done)
+- Download the source code.
+- Import to Eclipse workspace (Netbeans or any other should work fine too)
+- Add missing libraries:
+   - Javaml-0.1.7.jar
+   - poi-3.13-20150929.jar
+   - poi-ooxml-3.13-20150929.jar
 
