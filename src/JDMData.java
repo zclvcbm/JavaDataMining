@@ -31,10 +31,14 @@ public class JDMData {
 		txt.loadData(data);
 	}
 	
-	public void writeTxt(String path, Data data, boolean onlyNumbers)
+	public void writeTxt(String path, Data data, boolean onlyNumbers, boolean titles)
 			throws IOException {
 		Txt txt = new Txt(path);
-		txt.writeToTxt(data, onlyNumbers);
+		if(titles){
+			txt.writeToTxt(data, onlyNumbers);
+		}else{
+			txt.writeContentToTxt(data, onlyNumbers);
+		}
 	}
 
 	
