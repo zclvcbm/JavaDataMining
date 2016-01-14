@@ -10,7 +10,6 @@ public class Data {
 	public Data() {
 		data = new ArrayList<ArrayList>();
 	}
-
 	@SuppressWarnings("rawtypes")
 	public ArrayList<ArrayList> getData() {
 		return data;

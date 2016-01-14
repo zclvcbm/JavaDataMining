@@ -15,6 +15,7 @@ import net.sf.javaml.core.Dataset;
 import net.sf.javaml.core.Instance;
 import net.sf.javaml.tools.data.FileHandler;
 
+
 public class Classificator {
 	
 	public Classificator(){}

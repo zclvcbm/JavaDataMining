@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.apache.poi.EncryptedDocumentException;
-
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -22,7 +21,6 @@ public class Excel {
 	public Excel(String path) {
 		this.path=path;
 	}
-
 	public void loadData(Data data) throws EncryptedDocumentException, InvalidFormatException, IOException {
 
 		FileInputStream file = new FileInputStream(new File(path));

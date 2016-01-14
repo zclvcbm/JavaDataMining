@@ -11,6 +11,29 @@ public class Txt {
 	public Txt(String path) {
 		this.path=path;
 	}
+	
+	public void writeContentToTxt(Data data, boolean onlyNumbers) throws IOException {
+
+		if (path.equals(null)) {
+			path = "defaultData.data";
+		} else {
+			path = path.replace(".xls", ".data");
+		}
+		BufferedWriter out = new BufferedWriter(new FileWriter(path));
+		int totalRowNumber = data.getData().size();
+		for (int row = 1; row < totalRowNumber; row++) {
+			try {
+				if (onlyNumbers) {
+					writeNumbersRow(row, data, out);
+				} else {
+					writeRow(row, data, out);
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		out.close();
+	}
 
 	public void writeToTxt(Data data, boolean onlyNumbers) throws IOException {
 
