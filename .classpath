@@ -5,6 +5,5 @@
 	<classpathentry kind="lib" path="/home/mayuso/workspace/JDM/libraries/javaml-0.1.7.jar"/>
 	<classpathentry kind="lib" path="/home/mayuso/workspace/JDM/libraries/poi-3.13-20150929.jar"/>
 	<classpathentry kind="lib" path="/home/mayuso/workspace/JDM/libraries/poi-ooxml-3.13-20150929.jar"/>
-	<classpathentry kind="lib" path="/home/mayuso/workspace/JDM/libraries/poi-ooxml-schemas-3.13-20150929.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
